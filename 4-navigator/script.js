@@ -23,4 +23,5 @@ const positionLat = 2;
 const positionLong = 4;
 
 let remainingDistance = Math.sqrt((positionLat - adressLat)**2 + (positionLong - adressLong)**2);
-console.log(remainingDistance.toFixed(2));
+console.log(remainingDistance); 
+console.log(remainingDistance.toFixed(2)); // * Если необходимо округлить до 2 чисел после запятой
