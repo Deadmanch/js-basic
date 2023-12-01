@@ -23,5 +23,5 @@ const positionLat = 2;
 const positionLong = 4;
 
 let remainingDistance = Math.sqrt((positionLat - adressLat)**2 + (positionLong - adressLong)**2);
-console.log(remainingDistance); 
-console.log(remainingDistance.toFixed(2)); // * Если необходимо округлить до 2 чисел после запятой
+console.log(`Расстояние от текущего месторасположения до назначения: ${remainingDistance} км`);
+console.log(`Расстояние от текущего месторасположения до назначения: ${remainingDistance.toFixed(2)} км`); // * Если необходимо округлить до 2 чисел после запятой
