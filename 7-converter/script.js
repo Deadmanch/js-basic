@@ -16,22 +16,24 @@ const converter = (sum, currency, targetCurrency) => {
 			const EUR_TO_USD = 1.09;
 			const USD_TO_EUR = 0.916755;
 
+		
+
 			switch(true) {
-				case currency === 'руб' && targetCurrency === 'usd':
+				case currency.toLowerCase() === 'руб' && targetCurrency.toLowerCase() === 'usd':
 					return sum * RUB_TO_USD
-				case currency === 'usd' && targetCurrency === 'руб' :
+				case currency.toLowerCase() === 'usd' && targetCurrency.toLowerCase() === 'руб' :
 					return sum * USD_TO_RUB
-				case currency === 'руб' && targetCurrency === 'eur':
+				case currency.toLowerCase() === 'руб' && targetCurrency.toLowerCase() === 'eur':
 					return sum * RUB_TO_EUR
-				case currency === 'eur' && targetCurrency === 'руб' :
+				case currency.toLowerCase() === 'eur' && targetCurrency.toLowerCase() === 'руб' :
 					return sum * EUR_TO_RUB
-				case currency === 'usd' && targetCurrency === 'eur':
+				case currency.toLowerCase() === 'usd' && targetCurrency.toLowerCase() === 'eur':
 					return sum * USD_TO_EUR
-				case currency === 'eur' && targetCurrency === 'usd' :
+				case currency.toLowerCase() === 'eur' && targetCurrency.toLowerCase() === 'usd' :
 					return sum * EUR_TO_USD
 				default:
 					return null
 			}
 }
 
-console.log(converter(1000, 'руб', 'eur'));
+console.log(converter(1000, 'РУБ', 'eur'));
