@@ -7,7 +7,7 @@ function crypto(password) {
 
 function check(cryptoPassword, password) {
 	const checkPassword = crypto(password);
-	return cryptoPassword === checkPassword ? true : false;
+	return cryptoPassword === checkPassword;
 }
 console.log(crypto('123654789'));
 
