@@ -7,15 +7,20 @@
 const queryParam = {
 	search: 'Ноутбук',
 	take: 10,
-	pagination: 5
-}
+	pagination: 5,
+};
 
-function GetQueryParam() {
+function GetQueryParam(obj) {
 	let queryString = '';
-	for([key, value] of Object.entries(queryParam)) {
-		queryString+=`${key}=${value}&`
+	for (let key in obj) {
+		if (queryString !== '') {
+			console.log(queryString);
+			queryString += '&';
+		}
+		queryString += `${key}=${obj[key]}`;
+		console.log(queryString);
+	}
+	return queryString;
 }
-return queryString.slice(0, -1); 
-} 
 
 console.log(GetQueryParam(queryParam));

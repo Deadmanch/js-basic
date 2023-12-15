@@ -20,7 +20,7 @@ const toDoList = {
 		let newTaskId = 1;
 
 		while (true) {
-			const taskExists = this.tasks.find((task) => task.id === newTaskId);
+			const taskExists = this.findIndexTask(newTaskId);
 
 			if (!taskExists) {
 				break;
