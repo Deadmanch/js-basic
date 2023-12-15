@@ -14,11 +14,9 @@ function GetQueryParam(obj) {
 	let queryString = '';
 	for (let key in obj) {
 		if (queryString !== '') {
-			console.log(queryString);
 			queryString += '&';
 		}
 		queryString += `${key}=${obj[key]}`;
-		console.log(queryString);
 	}
 	return queryString;
 }
