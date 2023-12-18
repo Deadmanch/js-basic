@@ -20,7 +20,7 @@ const toDoList = {
 		let newTaskId = 1;
 
 		while (true) {
-			const taskExists = this.tasks.find((task) => task.id === newTaskId);
+			const taskExists = this.findTask(newTaskId);
 
 			if (!taskExists) {
 				break;
@@ -34,26 +34,27 @@ const toDoList = {
 		};
 		return this.tasks.push(newTask);
 	},
-	findIndexTask: function (id) {
-		return this.tasks.findIndex((task) => task.id === id);
+	findTask: function (id) {
+		return this.tasks.find((task) => task.id === id);
 	},
 
 	deleteTask: function (id) {
-		const index = this.findIndexTask(id);
+		const task = this.findTask(id);
 
-		if (index !== -1) {
+		if (task !== undefined) {
+			const index = this.tasks.indexOf(task);
 			this.tasks.splice(index, 1);
 		}
 	},
 	updateTask: function (id, title, priority) {
-		const index = this.findIndexTask(id);
+		const task = this.findTask(id);
 
-		if (index !== -1) {
+		if (task !== undefined) {
 			if (title) {
-				this.tasks[index].title = title;
+				task.title = title;
 			}
 			if (priority) {
-				this.tasks[index].priority = Number(priority);
+				task.priority = Number(priority);
 			}
 		}
 	},
