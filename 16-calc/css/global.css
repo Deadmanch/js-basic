@@ -1,0 +1,45 @@
+html {
+	font-family: 'Montserrat', sans-serif;
+	color: #ffffff;
+	font-style: normal;
+}
+body {
+	background: #16171d;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border: none;
+}
