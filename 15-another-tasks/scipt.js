@@ -10,7 +10,7 @@ const newTask = {
 		},
 	],
 	findTask: function (id) {
-		return this.tasks.find((task) => task.id === id);
+		return this.tasks.find(task => task.id === id);
 	},
 };
 const toDoList = {
@@ -44,7 +44,7 @@ const toDoList = {
 		return this.tasks.push(newTask);
 	},
 	findTask: function (id) {
-		return this.tasks.find((task) => task.id === id);
+		return this.tasks.find(task => task.id === id);
 	},
 
 	deleteTask: function (id) {
@@ -72,9 +72,9 @@ const toDoList = {
 	},
 };
 
-toDoList.addTask.apply(newTask, ['New Task', 'TestDescription', 10]);
-toDoList.addTask.apply(newTask, ['New Task1', '', 3]);
-toDoList.addTask.apply(newTask, ['New Task123', 'Hello', 10]);
+toDoList.addTask.apply(newTask, ['Генеральная уборка', 'Дополнительно вынести мусор', 10]);
+toDoList.addTask.apply(newTask, ['Сдать отчет', '', 3]);
+toDoList.addTask.apply(newTask, ['Сходить к зубному', 10]);
 toDoList.deleteTask.call(newTask, 3);
 const updateTaskNewTask = toDoList.updateTask.bind(newTask);
 updateTaskNewTask(4, 'Пойти в зал', 5);
